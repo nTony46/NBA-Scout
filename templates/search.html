@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>NBA Stats</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/search.css')}}">
+        <link href='https://fonts.googleapis.com/css?family=Shanti' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed' rel='stylesheet'>
+    </head>
+
+
+
+    <body>
+        <h1 id="upper-header">
+            <a href="/home" style="text-decoration: none; color: white;">
+                Welcome to NBA SCOUT
+            </a>
+        </h1>
+        <br>
+
+        <div class="container">
+            <form class="search" action="search" method="post">
+                    <p> Enter a player or team </p>
+                <br>
+                <input class="searchbox" type="text" name="team_input" placeholder="e.g. LeBron James OR Los Angeles Lakers" required>
+                <br>
+                <input class="submit" type="submit" value="SEARCH" id="search-button">
+            </form>
+        </div>
+
+        
+        <div>
+            {% for message in get_flashed_messages() %}
+                <p> {{message}} </p>
+            {% endfor %}
+        </div>
+        
+        <table class="stats-table">
+            <thead>
+                <tr>
+                    <th class="table-header">HEIGHT</th>
+                    <th class="table-header">WEIGHT</th>
+                    <th class="table-header">DEBUT YEAR</th>
+                    <th class="table-header">POSITION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {% for i in range(1) %}
+                    <td>{{data[1][0]}}</td>
+                    <td>{{data[1][1]}}</td>
+                    <td>{{data[1][2]}}</td>
+                    <td>{{data[1][3]}}</td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="stats-table">
+            <thead>
+                <tr>
+                    <th class="table-header">YEAR</th>
+                    <th class="table-header">GAMES PLAYED</th>
+                    <th class="table-header">MINUTES PER GAME</th>
+                    <th class="table-header">POINTS PER GAME</th>
+                    <th class="table-header">ASSISTS PER GAME</th>
+                    <th class="table-header">REBOUNDS PER GAME</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {% for i in range(1) %}
+                    <td>{{data[2][0]}}</td>
+                    <td>{{data[2][1]}}</td>
+                    <td>{{data[2][2]}}</td>
+                    <td>{{data[2][3]}}</td>
+                    <td>{{data[2][4]}}</td>
+                    <td>{{data[2][5]}}</td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+        
+
+        <div>
+            <div class="button-container">
+                <form action="random-search-team">
+                    <div class="button">
+                        <input type="submit" value="RANDOM TEAM" id="search-button">
+                    </div>
+                </form>
+
+                <form action="random-search-player">
+                    <div class="button">
+                        <input type="submit" value="RANDOM PLAYER" id="search-button">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        
+    </body>
+</html>

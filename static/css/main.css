@@ -1,0 +1,101 @@
+body{
+    height:100%;
+    width:100%;
+    position:fixed;
+    background-color: #141414ff;
+    text-align: center;
+}
+
+#upper-header{
+    color: white;
+    font-family: IBM Plex Sans Condensed;
+    font-size: 5em;
+    margin: 60px 0 0 0;
+}
+
+/* Searchbox and button */
+
+.container {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    overflow: hidden;
+}
+
+.searchbox{
+    box-sizing: border-box;
+    width: 500px;
+    height: 50px;
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: Shanti;
+    text-align: center;
+    font-size: 1.3em;
+    float:left
+}
+
+.submit{
+    position:relative;
+}
+
+/*Random Player and Random Team buttons*/
+.button-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.button{
+    box-sizing: border-box;
+    padding: 5px;
+    float: right;
+    width: 50%;
+    height: 50%;
+}
+
+.button input {
+    border: 1px solid #ccc;
+}
+
+p {
+    color: white;
+    font-family: Shanti;
+    font-size: 2em;
+    margin: 50px 0 0 0;
+}
+
+img {
+    margin: 60px 0 30px 0;
+    width: 250px;
+}
+
+input {
+    width: 300px;
+    height: 50px;
+    margin: 20px;
+    border: none;
+    border-radius: 12px;
+    font-family: Shanti;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+input:focus {
+    border: solid 5px #e5383b;
+    outline: none;
+}
+
+#search-button {
+    background-color: #141414ff;
+    border: 3px solid #e5383b;
+    color: white;
+    width: 200px;
+}
+
+#search-button:hover {
+    background-color: #e5383b;
+    cursor: pointer;
+}
