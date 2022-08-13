@@ -79,7 +79,7 @@ def get_team_stats(team_input):
         team_city = team['name']
         team_name = team['nickname']
 
-        if team_input.split()[-1].upper() == team_name.upper():
+        if team_input.split()[-1].upper() == team_name.split()[-1].upper():
             ppg = team['ppg']['avg']
             apg = team['apg']['avg']
             fpg = team['fgp']['avg']
