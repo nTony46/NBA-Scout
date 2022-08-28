@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>NBA Stats</title>
+        <title>NBA Scout</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/search.css')}}">
         <link href='https://fonts.googleapis.com/css?family=Shanti' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed' rel='stylesheet'>
@@ -96,6 +96,11 @@
                     </div>
                 </form>
 
+                <form action="visualize-shot-chart">
+                    <div class="button">
+                        <input type="submit" value="VISUALIZE SHOTS" id="search-button">
+                    </div>
+                </form>
             </div>
         </div>
         
