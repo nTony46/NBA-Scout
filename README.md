@@ -1,6 +1,7 @@
 # NBA Scout
 A Web Application that searches and displays stats of NBA players and teams. 
-- You can view the site using this [link](https://my-nba-scout.herokuapp.com/home)
+- ~~You can view the site using this [link](https://my-nba-scout.herokuapp.com/home)~~
+- Heroku stopped supporting the free tier :(
 
 # How to use
 - Enter the name of an NBA player or team to display their stats. 
